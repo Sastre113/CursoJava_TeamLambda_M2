@@ -8,6 +8,11 @@ package hitos;
  *
  */
 public class Hito1 {
+	
+	
+	public static void calcularPaga() {
+		
+	}
 
 	public double pagoManager(double sueldo) {
 		return sueldo * 1.1;

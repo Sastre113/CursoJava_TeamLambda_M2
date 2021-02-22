@@ -5,6 +5,10 @@ package main;
 
 import javax.swing.JOptionPane;
 
+import excepciones.SueldoExcepcion;
+import hitos.Hito1;
+import hitos.Hito2;
+
 /**
  * @author Miguel A. Sastre
  *
@@ -25,10 +29,14 @@ public class Menu {
 
 				switch (opcionElegida) {
 				case 1:
-					
+					Hito1.calcularPaga();
 					break;
 				case 2:
-					
+					try {
+						Hito2.calcularPaga();
+					} catch (SueldoExcepcion e) {
+						e.getMsg();
+					}
 					break;
 				case 3:
 					

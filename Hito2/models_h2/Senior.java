@@ -1,7 +1,7 @@
 /**
  * 
  */
-package models;
+package models_h2;
 
 /**
  * @author Miguel A. Sastre

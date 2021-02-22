@@ -3,6 +3,8 @@
  */
 package excepciones;
 
+import auxiliares.AuxMethod;
+
 /**
  * @author Miguel A. Sastre
  *
@@ -17,7 +19,7 @@ public class SueldoExcepcion extends Exception {
 	}
 	
 	public void getMsg() {
-		System.err.println(this.getTexto());
+		AuxMethod.mostrarInfo(this.getTexto());
 	}
 
 	/**

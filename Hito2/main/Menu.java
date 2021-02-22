@@ -8,13 +8,14 @@ import javax.swing.JOptionPane;
 import excepciones.SueldoExcepcion;
 import hitos.Hito1;
 import hitos.Hito2;
+import hitos.Hito3;
 
 /**
  * @author Miguel A. Sastre
  *
  */
 public class Menu {
-	
+
 	static void menu() {
 
 		String todasOpciones[] = autoGenerarOpciones(3);
@@ -27,22 +28,22 @@ public class Menu {
 				int opcionElegida = Integer.parseInt(opcion.toString().substring(5, 7));
 				System.out.println("Opcion elegida " + opcionElegida);
 
-				switch (opcionElegida) {
-				case 1:
-					Hito1.calcularPaga();
-					break;
-				case 2:
-					try {
+				try {
+					switch (opcionElegida) {
+					case 1:
+						Hito1.calcularPaga();
+						break;
+					case 2:
 						Hito2.calcularPaga();
-					} catch (SueldoExcepcion e) {
-						e.getMsg();
+						break;
+					case 3:
+						Hito3.calcularPaga();
+						break;
 					}
-					break;
-				case 3:
-					
-					break;
+				} catch (SueldoExcepcion e) {
+					e.getMsg();
 				}
-				
+
 			} else
 				exit = true;
 

@@ -1,4 +1,4 @@
-package models;
+package auxiliares;
 
 import javax.swing.JOptionPane;
 
@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
 public class AuxMethod {
 	
 	public static Object menuDesplegable(String [] opciones) {
-		Object opcion = JOptionPane.showInputDialog(null, "Selecciona un ejercicio", "Elegir",
+		Object opcion = JOptionPane.showInputDialog(null, "Selecciona un puesto", "Elegir",
 				JOptionPane.QUESTION_MESSAGE, null, opciones, opciones[0]);
 		return opcion;
 	}

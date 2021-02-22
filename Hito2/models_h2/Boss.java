@@ -1,19 +1,19 @@
 /**
  * 
  */
-package models;
+package models_h2;
 
 /**
  * @author Miguel A. Sastre
  *
  */
-public class Manager extends Empleado {
-
+public class Boss extends Empleado {
+	
 	/**
 	 * @param sueldoBase
 	 * @param reduccion
 	 */
-	public Manager(double sueldoBase) {
+	public Boss(double sueldoBase) {
 		super(sueldoBase);
 	}
 

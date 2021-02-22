@@ -3,8 +3,8 @@
  */
 package hitos;
 
+import auxiliares.AuxMethod;
 import excepciones.SueldoExcepcion;
-import models.AuxMethod;
 
 /**
  * @author Miguel A. Sastre
@@ -24,13 +24,13 @@ public class Hito2 {
 		 */
 		
 		switch (tipoEmpleado.toString()) {
-		case "Boss":
+		case "Boss_h1":
 			if(sueldo < 8000)
 				throw new SueldoExcepcion("El sueldo es demasiado bajo para un Boss");
 			else
 				// Do something
 			break;
-		case "Manager":
+		case "Manager_h1":
 			if(sueldo < 3000 || sueldo > 5000)
 				throw new SueldoExcepcion("El sueldo no es el adecuado para un Manager");
 			else
@@ -54,7 +54,7 @@ public class Hito2 {
 			else
 				// Do something
 			break;
-		case "Voluntario":
+		case "Voluntario_h1":
 			if(sueldo != 0)
 				throw new SueldoExcepcion("Los voluntarios no deben cobrar nada");
 			else

@@ -20,20 +20,20 @@ public class Hito1 {
 				.solicitarDatosDouble("¿Que sueldo deseas asignarle al puesto de " + tipoEmpleado.toString() + " ?");
 		
 		switch(tipoEmpleado.toString()) {
-		case  "Boss":
+		case  "Boss_h2":
 			Boss_h1 jefe = new Boss_h1(sueldo);
 			AuxMethod.mostrarInfo(jefe.toString());
 			
 			break;
-		case  "Manager":
+		case  "Manager_h2":
 			Manager_h1 manager = new Manager_h1(sueldo);
 			AuxMethod.mostrarInfo(manager.toString());
 			break;
-		case  "Empleado":
+		case  "Empleado_h2":
 			Empleado_h1 empleado = new Empleado_h1(sueldo);
 			AuxMethod.mostrarInfo(empleado.toString());
 			break;
-		case  "Voluntario":
+		case  "Voluntario_h2":
 			Voluntario_h1 voluntario = new Voluntario_h1();
 			AuxMethod.mostrarInfo(voluntario.toString());
 			break;

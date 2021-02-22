@@ -7,13 +7,13 @@ package models_h2;
  * @author Miguel A. Sastre
  *
  */
-public abstract class  Empleado {
+public abstract class  Empleado_h2 {
 	
 	protected double sueldoReal;
 	protected double sueldoBase;
 	protected final double VOLUNTARIO = 0;
 	
-	public Empleado() {
+	public Empleado_h2() {
 		this.sueldoBase = VOLUNTARIO;
 		this.sueldoReal = VOLUNTARIO;
 	}
@@ -21,7 +21,7 @@ public abstract class  Empleado {
 	/**
 	 * @param sueldoBase
 	 */
-	public Empleado(double sueldoBase) {
+	public Empleado_h2(double sueldoBase) {
 		this.sueldoBase = sueldoBase;
 		this.sueldoReal = sueldoBase;
 	}
@@ -29,7 +29,7 @@ public abstract class  Empleado {
 	/**
 	 * @param sueldoBase
 	 */
-	public Empleado(double sueldoBase,double reduccion) {
+	public Empleado_h2(double sueldoBase,double reduccion) {
 		this.sueldoBase = sueldoBase;
 		this.sueldoReal = sueldoBase - (sueldoBase * reduccion) ;
 	}

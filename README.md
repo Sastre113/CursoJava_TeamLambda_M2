@@ -83,7 +83,8 @@ Has de crear una funció que permeti emetre un bonus a tota la plantilla.
 		- Senior_h3.java
 		- Mid_h3.java
 		- Junior_h3.java
-
+	- view_h3
+		-Empresa.java
 
 ### 3. Clonar y ejecutar
 

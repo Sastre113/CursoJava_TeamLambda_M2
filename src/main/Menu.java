@@ -37,7 +37,7 @@ public class Menu {
 						Hito2.calcularPaga();
 						break;
 					case 3:
-						Hito3.calcularPaga();
+						Hito3.gestionEmpresa();
 						break;
 					}
 				} catch (SueldoExcepcion e) {

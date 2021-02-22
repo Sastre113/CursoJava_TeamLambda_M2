@@ -47,5 +47,12 @@ public abstract class  Empleado_h2 {
 	public double getSueldoBase() {
 		return sueldoBase;
 	}
-
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return  "\nSueldo base : " + this.getSueldoBase() + 
+				"\nSueldo real : " + this.getSueldoReal();
+	}
 }
+  

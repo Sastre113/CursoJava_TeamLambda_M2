@@ -3,6 +3,8 @@
  */
 package models_h3;
 
+import auxiliares.AuxMethod;
+
 /**
  * @author Miguel A. Sastre
  *
@@ -16,7 +18,7 @@ public abstract class Empleado_h3 {
 	protected double IRPF;
 	protected boolean ayudasConcedidas;
 	protected static final double AYUDA = 300;
-	protected static final double DIAS_LABORABLES = 238;
+	protected static final double MESES = 12;
 
 	
 	public Empleado_h3() {
@@ -34,11 +36,15 @@ public abstract class Empleado_h3 {
 	}
 	
 
-	private void establecerSueldo(double sueldoBruto) {
-		this.sueldoBruto = sueldoBruto;
-		this.sueldoNeto = this.calcularSueldoNeto();
-		this.sueldoBrutoAnual = this.calcularSueldoBrutoAnual();
-		this.sueldoNetoAnual = this.calcularSueldoNetoAnual();
+	public void establecerSueldo(double sueldoBruto) {
+		if(!this.ayudasConcedidas) {
+			this.sueldoBruto = sueldoBruto;
+			this.sueldoNeto = this.calcularSueldoNeto();
+			this.sueldoBrutoAnual = this.calcularSueldoBrutoAnual();
+			this.sueldoNetoAnual = this.calcularSueldoNetoAnual();
+		} else
+			AuxMethod.mostrarInfo("No se ha podido actualizar la información.\nEl empleado tiene ayudas concedidas");
+		
 	}
 	
 	public double calcularSueldoNeto() {
@@ -46,11 +52,11 @@ public abstract class Empleado_h3 {
 	}
 	
 	public double calcularSueldoBrutoAnual() {
-		return this.getSueldoBruto() * this.getDIAS_LABORABLES();
+		return this.getSueldoBruto() * this.getMESES();
 	}
 	
 	public double calcularSueldoNetoAnual() {
-		return this.getSueldoNeto() * this.getDIAS_LABORABLES();
+		return this.getSueldoNeto() * this.getMESES();
 	}
 	
 	public void bonus() {
@@ -96,8 +102,8 @@ public abstract class Empleado_h3 {
 	/**
 	 * @return the DIAS_LABORABLES
 	 */
-	public double getDIAS_LABORABLES() {
-		return DIAS_LABORABLES;
+	public double getMESES() {
+		return MESES;
 	}
 
 	/**
@@ -106,7 +112,15 @@ public abstract class Empleado_h3 {
 	public boolean isAyudasConcedidas() {
 		return ayudasConcedidas;
 	}
-	
+
+	@Override
+	public String toString() {
+		return "Empleado: \nsueldoNeto = " + sueldoNeto + "\nsueldoBruto = " + sueldoBruto + "\nsueldoNetoAnual = "
+				+ sueldoNetoAnual + "\nsueldoBrutoAnual = " + sueldoBrutoAnual + "\nIRPF = " + IRPF + "\nayudasConcedidas = "
+				+ ayudasConcedidas ;
+	}
+
+
 	
 
 }
